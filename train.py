@@ -1,10 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# @Author : Lei Mou
-# @File   : train3d.py
-"""
-Training script for CS-Net 3D
-"""
+'''
+@author: caixia_dong
+@license: (C) Copyright 2020-2023, Medical Artificial Intelligence, XJTU.
+@contact: caixia_dong@xjtu.edu.cn
+@software: MedAI
+@file: train.py
+@time: 2022/7/22 14:49
+@version:
+@desc:
+'''
 import os
 import torch
 import torch.nn as nn
