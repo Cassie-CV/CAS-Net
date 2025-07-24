@@ -19,6 +19,7 @@ import datetime
 import numpy as np
 from torch.optim import lr_scheduler
 
+from model.casnet_3d import CASNet3D
 from model.csnet_3d import CSNet3D
 from model.unet3d import UNet3D
 from dataloader.npy_3d_Loader import Data
@@ -38,10 +39,11 @@ args = {
     'model_path': './save_models_randomcrop',
     'batch_size': 2,  # VNet 1 other 2
     'folder': 'folder3',
-    'model_name': 'UNet3D',
+    'model_name': 'CASNet3D',
 }
 
 Test_Model = {'CSNet3D': CSNet3D,
+              'CASNet3D': CASNet3D,
               'UNet3D': UNet3D
               }
 
