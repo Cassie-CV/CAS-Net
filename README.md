@@ -12,11 +12,7 @@ CAS-Net is a novel deep learning network for the 3D segmentation of the coronary
   * **MSFA (Multi-Scale Feature Attention)**
   * **SAFE (Scale-Aware Feature Enhancement)**
 
-\<p align="center"\>
-\<img src="frame.png" width="800"/\>
-\<br\>
-\<em\>Figure 1: CAS-Net Network Architecture Diagram\</em\>
-\</p\>
+![CAS-Net Framework](frame.png)
 
 ## Environment Setup
 
