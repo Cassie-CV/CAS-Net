@@ -1,7 +1,7 @@
 """
 CAS-Net: A novel multi-attention, multi-scale 3D deep network for coronary artery segmentation
 Modules: AGFF, SAFE, MSFA
-Author: Adapted by Caixia Dong (2022)
+Author:  Caixia Dong (2022)
 """
 
 import torch
@@ -36,14 +36,14 @@ class ResEncoder3d(nn.Module):
         self.bn1 = nn.BatchNorm3d(out_channels)
         self.conv2 = nn.Conv3d(out_channels, out_channels, kernel_size=3, padding=1)
         self.bn2 = nn.BatchNorm3d(out_channels)
-        self.relu = nn.ReLU(inplace=False)  # ✅ 禁止 inplace
+        self.relu = nn.ReLU(inplace=False)  #  禁止 inplace
         self.conv1x1 = nn.Conv3d(in_channels, out_channels, kernel_size=1)
 
     def forward(self, x):
         residual = self.conv1x1(x)
         out = self.relu(self.bn1(self.conv1(x)))
         out = self.relu(self.bn2(self.conv2(out)))
-        out = out + residual  # ✅ 不使用 inplace
+        out = out + residual  # 不使用 inplace
         out = self.relu(out)
         return out
 
@@ -53,7 +53,7 @@ class Decoder3d(nn.Module):
         self.conv = nn.Sequential(
             nn.Conv3d(in_channels, out_channels, kernel_size=3, padding=1),
             nn.BatchNorm3d(out_channels),
-            nn.ReLU(inplace=False),  # ✅ 禁止 inplace
+            nn.ReLU(inplace=False),  #  禁止 inplace
             nn.Conv3d(out_channels, out_channels, kernel_size=3, padding=1),
             nn.BatchNorm3d(out_channels),
             nn.ReLU(inplace=False)
@@ -123,7 +123,7 @@ class SAFE(nn.Module):
         K = self.k_conv(multi_scale).view(B, C, -1)
         V = self.v_conv(multi_scale).view(B, C, -1)
 
-        att = self.softmax(torch.bmm(Q.permute(0, 2, 1), K) / (C ** 0.5))  # ✅ 加入归一化
+        att = self.softmax(torch.bmm(Q.permute(0, 2, 1), K) / (C ** 0.5))  # 加入归一化
         att_feat = torch.bmm(att, V.permute(0, 2, 1)).permute(0, 2, 1).view(B, C, H, W, D)
         return multi_scale + att_feat
 
