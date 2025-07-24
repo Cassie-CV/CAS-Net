@@ -75,7 +75,7 @@ python test.py
 
 ## Acknowledgements
 
-We would like to extend our special thanks to the authors of **CS²-Net** ([DOI: 10.1016/j.media.2020.101874](https://doi.org/10.1016/j.media.2020.101874)). Their work served as an important basebone for our study, and their public code repository is exceptionally well-structured.
+We would like to extend our special thanks to the authors of **CS²-Net** ([DOI: 10.1016/j.media.2020.101874](https://doi.org/10.1016/j.media.2020.101874)). Their work served as an important backbone for our study, and their public code repository is exceptionally well-structured.
 
 In our project, we have adapted and reused some of their general-purpose utility scripts (such as `utils/evaluation_metrics3D.py`). We are sincerely grateful for their excellent contribution to the open-source community.
 
