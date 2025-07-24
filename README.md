@@ -98,14 +98,14 @@ In our project, we have adapted and reused some of their general-purpose utility
 If you use our work or code in your research, please cite our paper:
 
 ```bibtex
-@article{CASNet2023,
-  title   = {{CAS-Net: A novel multi-attention, multi-scale 3D deep network for coronary artery segmentation}},
-  author  = {[Caixia Dong, Songhua Xu, Duwei Dai, Yizhi Zhang, Chunyan Zhang, Zongfang Li,]},
-  journal = {Medical Image Analysis},
-  volume  = {[85]},
-  pages   = {102745},
-  year    = {2023},
-  doi     = {10.1016/j.media.2023.102745}
+@article{dong2023novel,
+  title={A novel multi-attention, multi-scale 3D deep network for coronary artery segmentation},
+  author={Dong, Caixia and Xu, Songhua and Dai, Duwei and Zhang, Yizhi and Zhang, Chunyan and Li, Zongfang},
+  journal={Medical Image Analysis},
+  volume={85},
+  pages={102745},
+  year={2023},
+  publisher={Elsevier}
 }
 ```
 
