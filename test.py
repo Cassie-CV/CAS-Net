@@ -10,6 +10,7 @@
 '''
 import torch.nn as nn
 
+from model.casnet_3d import CASNet3D
 from model.csnet_3d import CSNet3D
 from model.unet3d import UNet3D
 
@@ -22,6 +23,7 @@ from postprocess.get_patch import get_patch_new
 from utils.evaluation_metrics3D import metrics_3d, Dice, over_rate, under_rate
 
 Test_Model = {'CSNet3D': CSNet3D,
+              'CASNet3D': CASNet3D,
               'UNet3D': UNet3D
               }
 
@@ -35,7 +37,7 @@ args = {
     'model_path': './save_models_randomcrop',
     'batch_size': 2,
     'folder': 'folder1',
-    'model_name': 'CSNet3D',
+    'model_name': 'CASNet3D',
 }
 
 if not os.path.exists(args['pred_path']):
