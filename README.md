@@ -8,8 +8,8 @@ This is the official PyTorch implementation for our paper, "A novel multi-attent
 
 CAS-Net is a novel deep learning network for the 3D segmentation of the coronary arteries. By introducing three core attention modules, our model aims to efficiently and accurately segment complex vascular structures from Coronary CT Angiography (CCTA) images.
 
-  * **AGFF (Attention-Gated Feature Fusion)**
-  * **MSFA (Multi-Scale Feature Attention)**
+  * **AGFF (Attention-Guided Feature Fusion)**
+  * **MSFA (Multi-Scale Feature Aggregation)**
   * **SAFE (Scale-Aware Feature Enhancement)**
 
 ![CAS-Net Framework](frame.png)
