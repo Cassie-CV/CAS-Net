@@ -216,7 +216,7 @@ class CASNet3D(nn.Module):
         return torch.sigmoid(out)
 
 if __name__ == '__main__':
-    model = CASNet3D(classes=1, channels=1)
+    model = CASNet3D(classes=2, channels=1)
     x = torch.randn(1, 1, 128, 160, 160)
     y = model(x)
     print("Output shape:", y.shape)
